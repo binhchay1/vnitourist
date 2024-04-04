@@ -85,7 +85,6 @@
 	
 	jQuery('.full-content-single').attr('style', 'margin-top: 0 !important');
 	jQuery('.featured-area').attr('style', 'margin-top: 0 !important');
-	jQuery('.content-area').attr('style', 'margin-top: 0 !important');
 
 })(jQuery);
 
