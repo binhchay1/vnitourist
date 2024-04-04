@@ -37,9 +37,9 @@
 					url = this.url;
 				}
 
-				// If the URL is longer that 40 chars, concatenate the beginning (after the domain) and ending with ...
+				// If the URL is longer that 40 chars, concatenate the beginning (after the domain) and ending with '...'.
 				if ( url.length > 40 && ( index = url.indexOf( '/' ) ) !== -1 && ( lastIndex = url.lastIndexOf( '/' ) ) !== -1 && lastIndex !== index ) {
-					// If the beginning + ending are shorter that 40 chars, show more of the ending
+					// If the beginning + ending are shorter that 40 chars, show more of the ending.
 					if ( index + url.length - lastIndex < 40 ) {
 						lastIndex = -( 40 - ( index + 1 ) );
 					}
@@ -98,6 +98,9 @@
 		var urlRegex2 = /^https?:\/\/[^\/]+\.[^\/]+($|\/)/i;
 		var speak = ( typeof window.wp !== 'undefined' && window.wp.a11y && window.wp.a11y.speak ) ? window.wp.a11y.speak : function() {};
 		var hasLinkError = false;
+		var __ = window.wp.i18n.__;
+		var _n = window.wp.i18n._n;
+		var sprintf = window.wp.i18n.sprintf;
 
 		function getSelectedLink() {
 			var href, html,
@@ -297,10 +300,10 @@
 			editor.execCommand( 'wp_link_cancel' );
 		} );
 
-		// WP default shortcuts
+		// WP default shortcuts.
 		editor.addShortcut( 'access+a', '', 'WP_Link' );
 		editor.addShortcut( 'access+s', '', 'wp_unlink' );
-		// The "de-facto standard" shortcut, see #27305
+		// The "de-facto standard" shortcut, see #27305.
 		editor.addShortcut( 'meta+k', '', 'WP_Link' );
 
 		editor.addButton( 'link', {
@@ -457,15 +460,17 @@
 							my: 'left top+2'
 						},
 						messages: {
-							noResults: ( typeof window.uiAutocompleteL10n !== 'undefined' ) ? window.uiAutocompleteL10n.noResults : '',
+							noResults: __( 'No results found.' ) ,
 							results: function( number ) {
-								if ( typeof window.uiAutocompleteL10n !== 'undefined' ) {
-									if ( number > 1 ) {
-										return window.uiAutocompleteL10n.manyResults.replace( '%d', number );
-									}
-
-									return window.uiAutocompleteL10n.oneResult;
-								}
+								return sprintf(
+									/* translators: %d: Number of search results found. */
+									_n(
+										'%d result found. Use up and down arrow keys to navigate.',
+										'%d results found. Use up and down arrow keys to navigate.',
+										number
+									),
+									number
+								);
 							}
 						}
 					} ).autocomplete( 'instance' )._renderItem = function( ul, item ) {
@@ -565,7 +570,7 @@
 		} );
 
 		editor.addButton( 'wp_link_edit', {
-			tooltip: 'Edit|button', // '|button' is not displayed, only used for context
+			tooltip: 'Edit|button', // '|button' is not displayed, only used for context.
 			icon: 'dashicon dashicons-edit',
 			cmd: 'WP_Link'
 		} );

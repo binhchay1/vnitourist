@@ -494,7 +494,7 @@ class WonderPlugin_Videoembed_Widgetview {
   				<input type="button" class="wpve-select-file wpve-select-mp4 button" data-textfield="wpve-mp4-url" data-texttype="video" value="Select an MP4 file" />
   				</p>
   				<p>
-  				<label>WebM Video URL (For Firefox HTML5 Player):</label>
+  				<label>WebM Video URL (Optional):</label>
   				<input type="text" class="wpve-webm-url widefat" name="<?php echo $param_names["webm"]; ?>" value="<?php echo $webm; ?>" />
   				<input type="button" class="wpve-select-file wpve-select-webm button" data-textfield="wpve-webm-url" data-texttype="video" value="Select a WebM file" />
   				</p>

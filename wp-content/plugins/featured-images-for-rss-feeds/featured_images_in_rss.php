@@ -5,12 +5,12 @@
  * Plugin URI:  http://wordpress.org/plugins/featured-images-for-rss-feeds/
  * Description: Outputs images in your RSS feed to Mailchimp, Infusionsoft, Hubspot, and other services that use RSS feed data for content marketing.
  * Author:      5 Star Plugins
- * Version:     1.5.8
+ * Version:     1.6.2
  * Author URI:  https://5starplugins.com/
  * Text Domain: featured-images-for-rss-feeds
  *
  */
-define( 'FIRSS_VERSION', '1.5.8' );
+define( 'FIRSS_VERSION', '1.6.2' );
 define( 'FIRSS_PLUGIN_URL', plugins_url( '/', __FILE__ ) );
 // __Freemius
 /**
@@ -22,7 +22,7 @@ if ( !function_exists( 'fifrf_fs' ) ) {
     function fifrf_fs()
     {
         global  $fifrf_fs ;
-        
+
         if ( !isset( $fifrf_fs ) ) {
             // Include Freemius SDK.
             require_once dirname( __FILE__ ) . '/includes/freemius/start.php';
@@ -44,7 +44,7 @@ if ( !function_exists( 'fifrf_fs' ) ) {
                 'is_live'         => true,
             ) );
         }
-        
+
         return $fifrf_fs;
     }
 
@@ -111,7 +111,7 @@ if ( !function_exists( 'firss_init' ) ) {
         add_action( 'firss_settings_after_form', 'firss_inform_premium' );
         firss_load_plugin_textdomain();
     }
-    
+
     /**
      * Load Localization files.
      *
@@ -129,7 +129,7 @@ if ( !function_exists( 'firss_init' ) ) {
         load_textdomain( 'featured-images-for-rss-feeds', WP_LANG_DIR . '/plugins/featured-images-in-rss-' . $locale . '.mo' );
         load_plugin_textdomain( 'featured-images-for-rss-feeds', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
     }
-    
+
     /**
      * Inline helper scripts.
      *
@@ -145,10 +145,10 @@ if ( !function_exists( 'firss_init' ) ) {
 			$('a[href="admin.php?page=featured-images-for-rss-feeds-wp-support-forum"]').attr('target','_blank');
 		});
 	</script>
-<?php 
+<?php
         echo  ob_get_clean() ;
     }
-    
+
     /**
      * Creates the parent menu.
      *
@@ -165,7 +165,7 @@ if ( !function_exists( 'firss_init' ) ) {
             'dashicons-images-alt'
         );
     }
-    
+
     /**
      * Register settings page.
      */
@@ -178,7 +178,7 @@ if ( !function_exists( 'firss_init' ) ) {
         register_setting( $group, 'featured_images_in_rss_clickable_link' );
         do_action( 'firss_register_settings', $group );
     }
-    
+
     /**
      * Setup the settings page.
      */
@@ -195,7 +195,7 @@ if ( !function_exists( 'firss_init' ) ) {
 	<div class="wrap">
 		<div class="firss-options-column1">
 			<div class="headerDiv" >
-				<a href="https://5starplugins.com/" target="_blank"><img class="headerImg" src="<?php 
+				<a href="https://5starplugins.com/" target="_blank"><img class="headerImg" src="<?php
         echo  plugins_url( 'includes/images/banner.jpg', __FILE__ ) ;
         ?>" width="940"></a>
 			</div>
@@ -203,67 +203,67 @@ if ( !function_exists( 'firss_init' ) ) {
 
 		<form method="post" action="options.php" class="firss-settings-form">
 
-			<?php 
+			<?php
         settings_fields( 'firss-settings-group' );
         ?>
 
 			<table class="form-table firss-settings">
 
-				<?php 
+				<?php
         do_action( 'firss_settings_before' );
         ?>
 
 		        <tr valign="top">
-		            <th scope="column"><?php 
+		            <th scope="column"><?php
         echo  __( 'RSS image size:', 'featured-images-for-rss-feeds' ) ;
         ?></th>
 		            <td>
-			            <?php 
+			            <?php
         $image_sizes = apply_filters( 'firss_image_sizes', get_intermediate_image_sizes() );
         ?>
 						<select name="featured_images_in_rss_size">
-							<option value="full" <?php 
+							<option value="full" <?php
         selected( $featured_images_in_rss_size === 'full' );
         ?>>Full Size</option>
-							<?php 
+							<?php
         foreach ( $image_sizes as $size_name ) {
             ?>
-								<option value="<?php 
+								<option value="<?php
             echo  esc_attr( $size_name ) ;
-            ?>" <?php 
+            ?>" <?php
             selected( $featured_images_in_rss_size === $size_name );
-            ?>><?php 
+            ?>><?php
             echo  $size_name ;
             ?></option>
-							<?php 
+							<?php
         }
         ?>
 						</select>
 
-						<?php 
-        
+						<?php
+
         if ( fifrf_fs()->can_use_premium_code() ) {
             ?>
 						<br><span class="custom-sizes" style="display: none;">
-							<label for="featured_images_in_rss_thumb_size_w"><?php 
+							<label for="featured_images_in_rss_thumb_size_w"><?php
             echo  __( 'Width', 'featured-images-for-rss-feeds' ) ;
             ?></label>
-							<input name="featured_images_in_rss_thumb_size_w" type="number" step="1" min="0" id="featured_images_in_rss_thumb_size_w" value="<?php 
+							<input name="featured_images_in_rss_thumb_size_w" type="number" step="1" min="0" id="featured_images_in_rss_thumb_size_w" value="<?php
             echo  esc_attr( $featured_images_in_rss_thumb_size_w ) ;
             ?>" class="small-text">
-							<label for="featured_images_in_rss_thumb_size_h"><?php 
+							<label for="featured_images_in_rss_thumb_size_h"><?php
             echo  __( 'Height', 'featured-images-for-rss-feeds' ) ;
             ?></label>
-							<input name="featured_images_in_rss_thumb_size_h" type="number" step="1" min="0" id="featured_images_in_rss_thumb_size_h" value="<?php 
+							<input name="featured_images_in_rss_thumb_size_h" type="number" step="1" min="0" id="featured_images_in_rss_thumb_size_h" value="<?php
             echo  esc_attr( $featured_images_in_rss_thumb_size_h ) ;
             ?>" class="small-text"> px
 						</span>
-						<?php 
+						<?php
         }
-        
+
         ?>
 						<p>
-							<small><?php 
+							<small><?php
         echo  sprintf( __( '(Looking for other sizes? Set the size of images for your website globally using <a href="%1$s" target="_blank">Media Options</a>. Then <a href="%2$s" target="_blank">Regenerate Thumbnails</a> for it to take effect.)', 'featured-images-for-rss-feeds' ), '/wp-admin/options-media.php', 'http://wordpress.org/plugins/regenerate-thumbnails/' ) ;
         ?>
 							</small>
@@ -271,105 +271,105 @@ if ( !function_exists( 'firss_init' ) ) {
 		            </td>
 		        </tr>
 		        <tr>
-		            <th scope="column"><?php 
+		            <th scope="column"><?php
         echo  __( 'RSS image alignment:', 'featured-images-for-rss-feeds' ) ;
         ?></th>
 		            <td>
 		                <select name="featured_images_in_rss_css">
-		                   <option value="left-above" <?php 
+		                   <option value="left-above" <?php
         selected( $featured_images_in_rss_css === 'left-above' );
-        ?>><?php 
+        ?>><?php
         echo  __( 'Image Left Above Text', 'featured-images-for-rss-feeds' ) ;
         ?></option>
-		                   <option value="centered-above" <?php 
+		                   <option value="centered-above" <?php
         selected( $featured_images_in_rss_css === 'centered-above' );
-        ?>><?php 
+        ?>><?php
         echo  __( 'Image Centered Above Text', 'featured-images-for-rss-feeds' ) ;
         ?></option>
-		                   <option value="left-wrap" <?php 
+		                   <option value="left-wrap" <?php
         selected( $featured_images_in_rss_css === 'left-wrap' );
-        ?>><?php 
+        ?>><?php
         echo  __( 'Image Left Text Wraps', 'featured-images-for-rss-feeds' ) ;
         ?></option>
-		                   <option value="right-wrap" <?php 
+		                   <option value="right-wrap" <?php
         selected( $featured_images_in_rss_css === 'right-wrap' );
-        ?>><?php 
+        ?>><?php
         echo  __( 'Image Right Text Wraps', 'featured-images-for-rss-feeds' ) ;
         ?></option>
 		                </select>
 		            </td>
 		        </tr>
 		        <tr>
-		            <th scope="column"><?php 
+		            <th scope="column"><?php
         echo  __( 'RSS image to text padding:', 'featured-images-for-rss-feeds' ) ;
         ?></th>
 		            <td>
-		            	<input name="featured_images_in_rss_padding" value="<?php 
+		            	<input name="featured_images_in_rss_padding" value="<?php
         esc_attr_e( $featured_images_in_rss_padding );
         ?>" class="small-text"> px
 		            </td>
 		        </tr>
 				<tr>
-					<th scope="column"><?php 
+					<th scope="column"><?php
         echo  __( 'Clickable images:', 'featured-images-for-rss-feeds' ) ;
         ?></th>
 					<td>
-						<input type="checkbox" name="featured_images_in_rss_clickable_link" <?php 
+						<input type="checkbox" name="featured_images_in_rss_clickable_link" <?php
         checked( $featured_images_in_rss_clickable_link );
         ?> >
-						<?php 
+						<?php
         echo  __( 'Select to enable linked images to posts.', 'featured-images-for-rss-feeds' ) ;
         ?>
-						<p><small><?php 
+						<p><small><?php
         echo  __( 'Outputs additional HTML surrounding the image.', 'featured-images-for-rss-feeds' ) ;
         ?></small></p>
 					</td>
 				</tr>
 
-		        <?php 
+		        <?php
         do_action( 'firss_settings_after' );
         ?>
 
 		    </table>
 
-		    <p class="submit"><input type="submit" name="submit-bpu" class="button-primary" value="<?php 
+		    <p class="submit"><input type="submit" name="submit-bpu" class="button-primary" value="<?php
         _e( 'Save Changes' );
         ?>" /></p>
 
-			<?php 
+			<?php
         do_action( 'firss_settings_form_actions' );
         ?>
 
 		</form>
 </div>
 
-		<?php 
+		<?php
         do_action( 'firss_settings_after_form' );
         ?>
 
 		<div class="footer-notes">
-			<br/>- <?php 
+			<br/>- <?php
         echo  sprintf( __( 'If you like this plugin, please <a href="%s" target=_blank>Rate and Review</a> it so others can benefit too.', 'featured-images-for-rss-feeds' ), 'http://wordpress.org/support/view/plugin-reviews/featured-images-for-rss-feeds/?rate=5#new-post' ) ;
         ?>
-			<br/>- <?php 
+			<br/>- <?php
         echo  sprintf( __( 'Still not seeing images in your feed? Verify featured images are set. Clear your browser and any server caches. Using Feedburner? Be sure to also <a href="%s" target=_blank>Ping Feedburner</a> so it refreshes your feed.', 'featured-images-for-rss-feeds' ), esc_url( 'http://feedburner.google.com/fb/a/pingSubmit?bloglink=' . site_url() ) ) ;
         ?>
-			<br/>- <?php 
+			<br/>- <?php
         echo  sprintf( __( 'To view your site’s raw RSS feed, click here: <a href="%s/feed/" target=_blank>/feed/</a>', 'featured-images-for-rss-feeds' ), esc_url( site_url() ) ) ;
         ?>
-			<p/><?php 
+			<p/><?php
         echo  sprintf( __( 'Free and premium FAQ and Support contact form available at <a href="%s" target=_blank>support.5starplugins.com</a>', 'featured-images-for-rss-feeds' ), esc_url( 'https://support.5starplugins.com/' ) ) ;
         ?>
-			<p/><?php 
+			<p/><?php
         echo  sprintf( __( 'Developed and supported by <a href="%s" target=_blank>5 Star Plugins</a> in San Diego, CA', 'featured-images-for-rss-feeds' ), esc_url( 'https://5starplugins.com/' ) ) ;
-        ?> <img class="footerLogo" src="<?php 
+        ?> <img class="footerLogo" src="<?php
         echo  plugins_url( 'includes/images/5StarPlugins_Logo80x80.png', __FILE__ ) ;
         ?>" width="20">
 		</div>
 	</div>
-<?php 
+<?php
     }
-    
+
     /**
      * Adding WordPress plugin action links.
      */
@@ -379,7 +379,7 @@ if ( !function_exists( 'firss_init' ) ) {
             'settings' => '<a href="' . get_bloginfo( 'wpurl' ) . '/wp-admin/admin.php?page=featured-images-for-rss-feeds">Settings</a>',
         ), $links );
     }
-    
+
     /**
      * Rate plugin.
      */
@@ -392,7 +392,7 @@ if ( !function_exists( 'firss_init' ) ) {
         }
         return $links;
     }
-    
+
     function firss_filter_post_thumbnail_html(
         $html,
         $pid,
@@ -411,20 +411,20 @@ if ( !function_exists( 'firss_init' ) ) {
         }
         return $html;
     }
-    
+
     /**
      * Feature the images in RSS feeds.
      */
     function firss_featured_images_in_rss( $content )
     {
         global  $post ;
-        
+
         if ( fifrf_fs()->can_use_premium_code() && get_option( 'featured_images_in_rss_media_tag_disable_content_images' ) ) {
             firss_settings_init();
             return $content;
         }
-        
-        
+
+
         if ( has_post_thumbnail( $post->ID ) ) {
             firss_settings_init();
             $featured_images_in_rss_size = get_option( 'featured_images_in_rss_size' );
@@ -436,10 +436,10 @@ if ( !function_exists( 'firss_init' ) ) {
                 'link_thumbnail' => $featured_images_in_rss_clickable_link,
             ) ) . $content;
         }
-        
+
         return $content;
     }
-    
+
     /**
      * Show premium features and link to subscribe page.
      *
@@ -456,58 +456,58 @@ if ( !function_exists( 'firss_init' ) ) {
 		<tr class="premiumHead">
 			<th class="preBanner" scope="column" colspan=2>
 				<h1>
-					<?php 
+					<?php
         echo  sprintf( __( 'Unlock Premium Features%s', 'featured-images-for-rss-feeds' ), ( fifrf_fs()->is_trial() ? ' ' . __( '(Free Trial)', 'featured-images-for-rss-feeds' ) : '' ) ) ;
         ?>
 				</h1>
 			</th>
 		</tr>
 
-		<?php 
+		<?php
         foreach ( firss_premium_features() as $feature => $desc ) {
             ?>
 			<tr>
-				<td class="preBanner" width="30%" scope="column"><span class="dashicons dashicons-yes firss-premium"></span><span class="firss-premium-feature"><?php 
+				<td class="preBanner" width="30%" scope="column"><span class="dashicons dashicons-yes firss-premium"></span><span class="firss-premium-feature"><?php
             echo  $feature ;
             ?></span></td>
-				<td width="70%" scope="column"><em><?php 
+				<td width="70%" scope="column"><em><?php
             echo  $desc ;
             ?></em></td>
 			</tr>
-		<?php 
+		<?php
         }
         ?>
 		<tr>
-			<th style="text-align: center; padding-bottom: 20px;" scope="column" colspan="2"><a class="btnBuy" href="<?php 
+			<th style="text-align: center; padding-bottom: 20px;" scope="column" colspan="2"><a class="btnBuy" href="<?php
         echo  esc_url( firss_upgrade_url() ) ;
-        ?>"><?php 
+        ?>"><?php
         _e( 'Upgrade Now', 'featured-images-for-rss-feeds' );
         ?></a>
 			</th>
 		</tr>
-		<?php 
-        
+		<?php
+
         if ( !fifrf_fs()->is_trial() ) {
             ?>
 			<tr>
 				<th style="text-align: center; padding-bottom: 20px;" scope="column" colspan="2">
-				<a class="trialLink" href="<?php 
+				<a class="trialLink" href="<?php
             echo  esc_url( '/wp-admin/admin.php?trial=true&page=featured-images-for-rss-feeds-pricing' ) ;
             ?>">
-				<?php 
+				<?php
             echo  __( '14 Day Free Trial', 'featured-images-for-rss-feeds' ) ;
             ?></a>
 				</th>
 			</tr>
-		<?php 
+		<?php
         }
-        
+
         ?>
 	</table>
 </div>
-<?php 
+<?php
     }
-    
+
     /**
      * Display the call to action button.
      *
@@ -520,15 +520,15 @@ if ( !function_exists( 'firss_init' ) ) {
         }
         ?>
 <!--	<div class="call-to-action">
-		<a class="btnBuy" href="<?php 
+		<a class="btnBuy" href="<?php
         echo  esc_url( firss_upgrade_url() ) ;
-        ?>"><?php 
+        ?>"><?php
         _e( 'Upgrade Now', 'featured-images-for-rss-feeds' );
         ?></a><p/>
 	</div> -->
-<?php 
+<?php
     }
-    
+
     /**
      * Output the images styling.
      */
@@ -559,7 +559,7 @@ if ( !function_exists( 'firss_init' ) ) {
          */
         return apply_filters( 'firss_image_styles', $featured_images_in_rss_css_code );
     }
-    
+
     /**
      * Checks and sets default values if options have never been set before.
      */
@@ -579,7 +579,7 @@ if ( !function_exists( 'firss_init' ) ) {
         }
         do_action( 'firss_update_default_settings' );
     }
-    
+
     /**
      * Outputs the list of premium features.
      *
@@ -600,7 +600,7 @@ if ( !function_exists( 'firss_init' ) ) {
         );
         return $features;
     }
-    
+
     /**
      * The message for current plugin users.
      */
@@ -614,7 +614,7 @@ if ( !function_exists( 'firss_init' ) ) {
     )
     {
         return sprintf(
-            __fs( 'hey-x' ) . '<br>' . __( 'Please help us improve %2$s! If you opt-in, some data about your usage will be sent to our platform Freemius. If you skip this, that\'s okay, the %2$s will still work just fine.', 'featured-images-for-rss-feeds' ),
+            __( 'Hi %1$s, please help us improve %2$s! If you opt-in, some data about your usage will be sent to our platform Freemius. If you skip this, that\'s okay, the %2$s will still work just fine.', 'featured-images-for-rss-feeds' ),
             $user_first_name,
             '<b>' . $plugin_title . '</b>',
             '<b>' . $user_login . '</b>',
@@ -622,7 +622,7 @@ if ( !function_exists( 'firss_init' ) ) {
             $freemius_link
         );
     }
-    
+
     /**
      * The message for new plugin users.
      */
@@ -636,7 +636,7 @@ if ( !function_exists( 'firss_init' ) ) {
     )
     {
         return sprintf(
-            __fs( 'hey-x' ) . '<br>' . __( 'In order to enjoy all of the features, functionality and enable a free trial of premium version, %2$s needs to connect your user, %3$s at %4$s, to our platform Freemius.', 'featured-images-for-rss-feeds' ),
+            __( 'Hi %1$s, in order to enjoy all of the features, functionality and enable a free trial of premium version, %2$s needs to connect your user, %3$s at %4$s, to our platform Freemius.', 'featured-images-for-rss-feeds' ),
             $user_first_name,
             '<b>' . $plugin_title . '</b>',
             '<b>' . $user_login . '</b>',
@@ -644,7 +644,7 @@ if ( !function_exists( 'firss_init' ) ) {
             $freemius_link
         );
     }
-    
+
     /**
      * Retrieve the upgrade URL.
      *
@@ -662,7 +662,7 @@ if ( !function_exists( 'firss_init' ) ) {
         $params = wp_parse_args( $params, $defaults );
         return add_query_arg( $params, fifrf_fs()->get_upgrade_url() );
     }
-    
+
     /**
      * Styles for the plugin settins page.
      *
@@ -851,8 +851,8 @@ if ( !function_exists( 'firss_init' ) ) {
 
 
 	</style>
-<?php 
+<?php
     }
-    
+
     /* End wrap of if (!function_exists(firss_init)) */
 }

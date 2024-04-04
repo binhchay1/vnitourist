@@ -1,7 +1,7 @@
 /** Wonderplugin Video Embed
- * Copyright 2018 Magic Hills Pty Ltd All Rights Reserved
- * Website: http://www.wonderplugin.com
- * Version 1.7 
+ * Copyright 2024 Magic Hills Pty Ltd All Rights Reserved
+ * Website: https://www.wonderplugin.com
+ * Version 2.0 
  */
 (function($){$(document).ready(function(){$(document).on("click",".wpve-tab-label",function(){var parent_con=$(this).closest(".wpve-tab-container");parent_con.find(".wpve-tab-label").removeClass("wpve-tab-label-selected");$(this).addClass("wpve-tab-label-selected");parent_con.find(".wpve-tab-content").removeClass("wpve-tab-content-selected");parent_con.find("."+$(this).data("contentclass")).addClass("wpve-tab-content-selected");window.wpve_activetab=$(this).data("contentclass")});$(document).on("widget-updated",
 function(){if(window.wpve_activetab){$(".wpve-tab-label").removeClass("wpve-tab-label-selected");$(".wpve-tab-content").removeClass("wpve-tab-content-selected");$(".wpve-tab-label").each(function(){if(window.wpve_activetab==$(this).data("contentclass")){$(this).addClass("wpve-tab-label-selected");$("."+$(this).data("contentclass")).addClass("wpve-tab-content-selected")}})}});$(document).on("click",".wpve-videotype-input",function(){if($(this).closest(".wpve-mce-dialog").length>0)return;var parent_con=

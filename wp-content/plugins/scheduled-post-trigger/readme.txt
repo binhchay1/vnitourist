@@ -1,14 +1,15 @@
-=== Plugin Name ===
+=== Scheduled Post Trigger ===
 Contributors: mossifer
 Donate link: http://mosswebworks.com/donate/
-Tags: scheduled posts, missed schedule, missed scheduled posts
-Requires at least: 3.0.1
-Tested up to: 5.2.3
-Stable tag: 5.2.3
+Tags: scheduled posts, missed schedule, missed scheduled posts, missed posts
+Requires at least: 4.2
+Tested up to: 6.4.3
+Stable tag: 6.4.3
+Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Checks to see if any scheduled posts have been missed. If so, it publishes them.
+Checks to see if any scheduled posts have been missed. If so, it publishes them. NOTE: This plugin is meant as a stop-gap until you and your web host determine why the built-in WordPress Cron Scheduler is not working. This plugin is not designed for continuous use on large sites that have over 10k of scheduled posts or heavy traffic.
 
 == Description ==
 When a visitor loads your site, this lightweight script checks to see if any scheduled posts have been missed. If so, it publishes them immediately. 
@@ -30,10 +31,21 @@ Every time someone loads your your home page or a single post/article.
 
 Make sure your time zone is set correctly. Make sure there are no plugin conflicts by turning off your other plugins, one by one. Especially caching plugins.
 
-If you're still having trouble, contact Moss Web Works directly to troubleshoot.
+= The plugin is giving the site a memory error or white screen =
+If your database has a significant number of scheduled posts (over 10k) or you have heavy traffic,  then you might not have enough memory allocated to WordPress. You can try adding this line in your wp_config.php file: 
+
+	define('WP_MEMORY_LIMIT', '256M');
+
+If you're still having memory problems, then talk to your web host about your root problem: the built-in WordPress Cron Scheduler is not publishing your scheduled posts. 
 
 
 == Changelog ==
+
+= 3.2 =
+Rename plugin with company branding. Tested to WP 6.3
+
+= 3.1 =
+Fixes bug where it wasn't finding all custom post types compatible with other plugins.
 
 = 3.0 =
 Optimizes database call to use index. Will check post type=post, page, and any custom post types like portfolio, recipe, testimonial, etc.
@@ -63,4 +75,3 @@ Small change to integrate with WP posting function.
 
 = 1.7 =
 Minor changes to plugin.
-

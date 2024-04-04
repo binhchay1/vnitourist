@@ -1,21 +1,15 @@
 <?php
-/**
- * The image field which uploads images via HTML <input type="file">.
- *
- * @package Meta Box
- */
+defined( 'ABSPATH' ) || die;
 
 /**
- * Image field class which uses <input type="file"> to upload.
+ * The image field which uploads images via HTML <input type="file">.
  */
 class RWMB_Image_Field extends RWMB_File_Field {
-	/**
-	 * Enqueue scripts and styles.
-	 */
 	public static function admin_enqueue_scripts() {
 		parent::admin_enqueue_scripts();
 		wp_enqueue_media();
-		wp_enqueue_style( 'rwmb-image', RWMB_CSS_URL . 'image.css', array(), RWMB_VER );
+		wp_enqueue_style( 'rwmb-image', RWMB_CSS_URL . 'image.css', [], RWMB_VER );
+		wp_style_add_data( 'rwmb-image', 'path', RWMB_CSS_DIR . 'image.css' );
 	}
 
 	/**
@@ -30,29 +24,29 @@ class RWMB_Image_Field extends RWMB_File_Field {
 	protected static function file_html( $file, $index, $field ) {
 		$attributes = self::get_attributes( $field, $file );
 
+		$edit_link = get_edit_post_link( $file );
+		if ( $edit_link ) {
+			$edit_link = sprintf( '<a href="%s" class="rwmb-image-edit" target="_blank"><span class="dashicons dashicons-edit"></span></a>', $edit_link );
+		}
+
+		$attachment_image = is_numeric( $file ) ? wp_get_attachment_image( $file, $field['image_size'] ) : '<img width="150" height="150" src="' . esc_url( $file ) . '" alt="" />';
+
 		return sprintf(
-			'<li class="rwmb-image-item attachment %s">
-				<input type="hidden" name="%s[%s]" value="%s">
-				<div class="attachment-preview">
-					<div class="thumbnail">
-						<div class="centered">
-							%s
-						</div>
-					</div>
-				</div>
+			'<li class="rwmb-image-item">
+				<div class="rwmb-file-icon">%s</div>
 				<div class="rwmb-image-overlay"></div>
 				<div class="rwmb-image-actions">
-					<a href="%s" class="rwmb-image-edit" target="_blank"><span class="dashicons dashicons-edit"></span></a>
+					%s
 					<a href="#" class="rwmb-image-delete rwmb-file-delete" data-attachment_id="%s"><span class="dashicons dashicons-no-alt"></span></a>
 				</div>
+				<input type="hidden" name="%s[%s]" value="%s">
 			</li>',
-			esc_attr( $field['image_size'] ),
-			$attributes['name'],
-			$index,
-			$file,
-			wp_get_attachment_image( $file, $field['image_size'] ),
-			get_edit_post_link( $file ),
-			$file
+			$attachment_image,
+			$edit_link,
+			esc_attr( $file ),
+			esc_attr( $attributes['name'] ),
+			esc_attr( $index ),
+			esc_attr( $file )
 		);
 	}
 
@@ -64,13 +58,9 @@ class RWMB_Image_Field extends RWMB_File_Field {
 	 * @return array
 	 */
 	public static function normalize( $field ) {
-		$field = parent::normalize( $field );
-		$field = wp_parse_args(
-			$field,
-			array(
-				'image_size' => 'thumbnail',
-			)
-		);
+		$field               = parent::normalize( $field );
+		$field               = wp_parse_args( $field, [ 'image_size' => 'thumbnail' ] );
+		$field['attributes'] = wp_parse_args( $field['attributes'], [ 'accept' => 'image/*' ] );
 
 		return $field;
 	}
@@ -104,21 +94,19 @@ class RWMB_Image_Field extends RWMB_File_Field {
 	 *
 	 * @return array|bool False if file not found. Array of image info on success.
 	 */
-	public static function file_info( $file, $args = array(), $field = array() ) {
+	public static function file_info( $file, $args = [], $field = [] ) {
 		$path = get_attached_file( $file );
 		if ( ! $path ) {
 			return false;
 		}
 
-		$args       = wp_parse_args(
-			$args,
-			array(
-				'size' => 'thumbnail',
-			)
-		);
-		$image      = wp_get_attachment_image_src( $file, $args['size'] );
+		$args  = wp_parse_args( $args, [ 'size' => 'thumbnail' ] );
+		$image = wp_get_attachment_image_src( $file, $args['size'] );
+		if ( ! $image ) {
+			return false;
+		}
 		$attachment = get_post( $file );
-		$info       = array(
+		$info       = [
 			'ID'          => $file,
 			'name'        => basename( $path ),
 			'path'        => $path,
@@ -128,17 +116,36 @@ class RWMB_Image_Field extends RWMB_File_Field {
 			'caption'     => $attachment->post_excerpt,
 			'description' => $attachment->post_content,
 			'alt'         => get_post_meta( $file, '_wp_attachment_image_alt', true ),
-		);
+		];
 		if ( function_exists( 'wp_get_attachment_image_srcset' ) ) {
 			$info['srcset'] = wp_get_attachment_image_srcset( $file, $args['size'] );
 		}
 
-		$info = wp_parse_args( $info, wp_get_attachment_metadata( $file ) );
+		$info = wp_parse_args( $info, self::get_image_meta_data( $file ) );
 
 		// Do not overwrite width and height by returned value of image meta.
 		$info['width']  = $image[1];
 		$info['height'] = $image[2];
 
 		return $info;
+	}
+
+	/**
+	 * Get image meta data.
+	 *
+	 * @param  int $attachment_id Attachment ID.
+	 * @return array
+	 */
+	protected static function get_image_meta_data( $attachment_id ) {
+		$metadata = wp_get_attachment_metadata( $attachment_id );
+		if ( empty( $metadata['sizes'] ) ) {
+			return $metadata;
+		}
+
+		$dir_url = dirname( wp_get_attachment_url( $attachment_id ) );
+		foreach ( $metadata['sizes'] as &$size ) {
+			$size['url'] = "{$dir_url}/{$size['file']}";
+		}
+		return $metadata;
 	}
 }

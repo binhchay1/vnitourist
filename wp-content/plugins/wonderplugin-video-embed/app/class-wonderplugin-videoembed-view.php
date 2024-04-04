@@ -90,17 +90,16 @@ class WonderPlugin_Videoembed_View {
 		<div class="wrap">
 		<div id="icon-wonderplugin-videoembed" class="icon32"><br /></div>
 		
-		<h2><?php echo __( 'Wonder Video Embed', 'wonderplugin_videoembed' ) . (WONDERPLUGIN_VIDEOEMBED_VERSION_TYPE == "L" ? "" : ((WONDERPLUGIN_VIDEOEMBED_VERSION_TYPE == "C") ? " Commercial Version" : " Free Version")) . " " . WONDERPLUGIN_VIDEOEMBED_VERSION; ?> </h2>
+		<h2><?php echo __( 'Wonder Video Embed', 'wonderplugin_videoembed' ) . (WONDERPLUGIN_VIDEOEMBED_VERSION_TYPE == "L" ? " Version" : ((WONDERPLUGIN_VIDEOEMBED_VERSION_TYPE == "C") ? " Pro Version" : " Free Version")) . " " . WONDERPLUGIN_VIDEOEMBED_VERSION; ?> </h2>
 		 
-		<div id="welcome-panel" class="welcome-panel">
-			<div class="welcome-panel-content">
-				<h3>WordPress Video Embed Plugin & Widget</h3>
-				<div class="welcome-panel-column-container">
-					<div class="welcome-panel-column">
+		<div id="welcome-panel">
+			<div>
+				<div style="display:flex;">
+					<div style="padding:18px;">
 						<h4>Get Started</h4>
 						<a class="button button-primary button-hero" href="<?php echo admin_url('admin.php?page=wonderplugin_videoembed_show_quick_start'); ?>">Quick Start</a>
 					</div>
-					<div class="welcome-panel-column welcome-panel-last">
+					<div style="padding:18px;">
 						
 						<h4>More Actions</h4>
 						<ul>
@@ -188,8 +187,7 @@ class WonderPlugin_Videoembed_View {
 		<h3 id="mp4video">Add MP4/WebM Video</h3>
 		<ul style="list-style-type: square;padding-left:18px;">
 		<li>To play MP4/WebM video, in the plugin, Video tab, select the option MP4/WebM Video, then click the button Select an MP4 file to upload or select an MP4 file from WordPress Media Library.</li>
-		<li>Firefox and Opera do not support MP4 format. To play with HTML5 in Firefox and Opera, an extra WebM format video must be provided. If the WebM video is not provided, in Firefox and Opera, Flash will be used for playing the video.</li>
-		<li>Your vidoe must be HTML5 compatible. If your video is not playing or not playing correctly, please view the tutorial for how to convert the video: <a href="https://www.wonderplugin.com/wordpress-tutorials/how-to-convert-video-to-html5-compatible/" target="_blank">https://www.wonderplugin.com/wordpress-tutorials/how-to-convert-video-to-html5-compatible/</a></li>
+		<li>The provided MP4 videos must be HTML5 compatible. If your video is not playing or not playing correctly, please view the tutorial for how to convert the video: <a href="https://www.wonderplugin.com/wordpress-tutorials/how-to-convert-video-to-html5-compatible/" target="_blank">https://www.wonderplugin.com/wordpress-tutorials/how-to-convert-video-to-html5-compatible/</a></li>
 		<li>To play a video file hosted on a remote website, you can directly enter the video URL to the text box.</li>
 		</ul>
 		<div class="wonderplugin-tutorial-image"><img src="<?php echo WONDERPLUGIN_VIDEOEMBED_URL; ?>images/wordpress-add-mp4.png" /></div>

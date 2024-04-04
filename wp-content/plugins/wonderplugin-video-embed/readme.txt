@@ -3,7 +3,7 @@ Contributors: wonderplugin
 Tags: video embed, video player, video widget, video lightbox, YouTube embed, YouTube player, YouTube widget, YouTube lightbox, Vimeo embed, Vimeo player, Vimeo widget, Vimeo lightbox, Wistia embed, Wistia player, Wistia widget, Wistia lightbox
 Donate link: https://www.wonderplugin.com/wordpress-video-player/
 Requires at least: 3.6
-Tested up to: 5.9.3
+Tested up to: 6.4.3
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -14,12 +14,12 @@ Embed MP4, Youtube, Vimeo, Wistia videos to the sidebar widget, WordPress posts 
 
 **Wonder Video Embed**
 
-WonderPlugin Video Embed is an easy and powerful way to add videos to your WordPress. You can embed your video to the sidebar widget, WordPress posts and pages. It supports YouTube, Vimeo, Wistia and self-hosted MP4/WebM videos. The video player is fully responsive and works on iPhone, iPad, Android, Chrome, Firefox, Safari, Opera, Internet Explorer 8/9/10/11 and Microsoft Edge.
+WonderPlugin Video Embed is an easy and powerful way to add videos to your WordPress. You can embed your video to the sidebar widget, WordPress posts and pages. It supports YouTube, Vimeo, Wistia and self-hosted MP4/WebM videos. The video player is fully responsive and works on iPhone, iPad, Android, Chrome, Firefox, Safari, Opera, Internet Explorer and Microsoft Edge.
 
 **Features**
 
 * Support YouTube, Vimeo, Wistia, iFrame and self-hosted MP4/WebM videos
-* Work on mobile, tablets and all major web browsers, including iPhone, iPad, Android, Firefox, Safari, Chrome, Opera, Internet Explorer 8/9/10/11 and Edge
+* Work on mobile, tablets and all major web browsers, including iPhone, iPad, Android, Firefox, Safari, Chrome, Opera, Internet Explorer and Edge
 * Fully responsive
 * Insert videos to sidebar widget
 * Insert videos into pages and posts
@@ -66,6 +66,12 @@ Please view the tutorial: [How to use the plugin in the Gutenberg editor](https:
 == Screenshots ==
 
 == Changelog ==
+
+= 2.0 =
+* Fix compatibility issues with PHP 8.2 and 8.3
+
+= 1.9 =
+* Remove the legacy Flash video player SWF file from the installation package
 
 = 1.8 =
 * Escape shortcode attributes

@@ -6,7 +6,7 @@ require_once 'class-wonderplugin-videoembed-widgetview.php';
 
 class WonderPlugin_Videoembed_Controller {
 
-	private $view, $model, $update;
+	public $view, $model, $update, $widgetview;
 
 	function __construct() {
 

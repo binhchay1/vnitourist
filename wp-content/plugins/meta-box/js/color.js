@@ -1,20 +1,35 @@
-jQuery( function ( $ ) {
+( function( $, rwmb ) {
 	'use strict';
 
 	/**
-	 * Update color picker element
-	 * Used for static & dynamic added elements (when clone)
+	 * Transform an input into a color picker.
 	 */
-	function update() {
-		var $this = $( this ),
-			$container = $this.closest( '.wp-picker-container' ),
-			data = $.extend(
+	function transform() {
+		const $this = $( this );
+		const mode = $this.data( 'options' )[ 'mode' ];
+		const alpha = $this.data( 'alpha-enabled' );
+
+		function initChange() {
+			if ( null !== mode && 'hex' !== mode && !alpha ) {
+				const color = new Color( $this.iris( 'option', 'color' ) );
+				$this.val( color.toCSS( mode ) );
+			}
+			triggerChange();
+		}
+
+		function triggerChange() {
+			$this.trigger( 'color:change' ).trigger( 'mb_change' );
+		}
+
+		const $container = $this.closest( '.wp-picker-container' ),
+			// Hack: the picker needs a small delay (learn from the Kirki plugin).
+			options = $.extend(
 				{
-					change: function () {
-						$( this ).trigger( 'color:change' );
+					change: function() {
+						setTimeout( initChange, 20 );
 					},
-					clear: function () {
-						$( this ).trigger( 'color:clear' );
+					clear: function() {
+						setTimeout( triggerChange, 20 );
 					}
 				},
 				$this.data( 'options' )
@@ -26,10 +41,15 @@ jQuery( function ( $ ) {
 			$container.remove();
 		}
 
-		// Show color picker
-		$this.wpColorPicker( data );
+		// Show color picker.
+		$this.wpColorPicker( options );
 	}
 
-	$( '.rwmb-color' ).each( update );
-	$( document ).on( 'clone', '.rwmb-color', update );
-} );
+	function init( e ) {
+		$( e.target ).find( '.rwmb-color' ).each( transform );
+	}
+
+	rwmb.$document
+		.on( 'mb_ready', init )
+		.on( 'clone', '.rwmb-color', transform );
+} )( jQuery, rwmb );

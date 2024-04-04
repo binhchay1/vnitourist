@@ -1,6 +1,8 @@
 <?php
 namespace EnableMediaReplace;
 
+use EnableMediaReplace\ShortPixelLogger\ShortPixelLogger as Log;
+
 class emrCache
 {
     protected $has_supercache  = false; // supercache seems to replace quite fine, without our help. @todo Test if this is needed
@@ -8,6 +10,7 @@ class emrCache
     protected $has_wpengine = false;
     protected $has_fastestcache = false;
     protected $has_siteground = false;
+    protected $has_litespeed = false;
 
     public function __construct()
     {
@@ -35,6 +38,11 @@ class emrCache
 	        $this->has_siteground = true;
       }
 
+      if (defined( 'LSCWP_DIR' ))
+      {
+          $this->has_litespeed = true;
+      }
+
       // @todo WpRocket?
       // @todo BlueHost Caching?
     }
@@ -57,7 +65,7 @@ class emrCache
         $this->checkCaches();
 
         // general WP
-        if ($post_id > 0)
+        if ($args['flush_mode']  === 'post' && $post_id > 0)
           clean_post_cache($post_id);
         else
           wp_cache_flush();
@@ -78,6 +86,10 @@ class emrCache
         if ($this->has_fastestcache)
             $this->removeFastestCache();
 
+        if ($this->has_litespeed)
+            $this->litespeedReset($post_id);
+
+        do_action('emr/cache/flush', $post_id);
     }
 
     protected function removeSuperCache()
@@ -97,13 +109,13 @@ class emrCache
     protected function removeWpeCache()
     {
       if ( method_exists( 'WpeCommon', 'purge_memcached' ) ) {
-          WpeCommon::purge_memcached();
+          \WpeCommon::purge_memcached();
       }
       if ( method_exists( 'WpeCommon', 'clear_maxcdn_cache' ) ) {
-          WpeCommon::clear_maxcdn_cache();
+          \WpeCommon::clear_maxcdn_cache();
       }
       if ( method_exists( 'WpeCommon', 'purge_varnish_cache' ) ) {
-          WpeCommon::purge_varnish_cache();
+          \WpeCommon::purge_varnish_cache();
       }
     }
 
@@ -116,6 +128,11 @@ class emrCache
     protected function removeSiteGround()
     {
     		sg_cachepress_purge_cache();
+    }
+
+    protected function litespeedReset($post_id)
+    {
+      do_action('litespeed_media_reset', $post_id);
     }
 
 }
