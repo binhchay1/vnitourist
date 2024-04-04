@@ -1,0 +1,7 @@
+{
+"tax_meta_2":"a:1:{s:14:\"phys_cat_color\";s:7:\"#e5cb52\";}",
+"tax_meta_3":"a:1:{s:14:\"phys_cat_color\";s:7:\"#8224e3\";}",
+"tax_meta_4":"a:1:{s:14:\"phys_cat_color\";s:7:\"#b1ca64\";}",
+"tax_meta_5":"a:1:{s:14:\"phys_cat_color\";s:7:\"#cc6699\";}",
+"tax_meta_6":"a:1:{s:14:\"phys_cat_color\";s:7:\"#1baaa6\";}"
+}

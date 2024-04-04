@@ -1,0 +1,121 @@
+.widget-area aside.Travel_Blog_About_Us {
+	padding-bottom: 0;
+}
+
+.about-us-inner {
+	.content-inner {
+		position:   relative;
+		margin:     -30px 15px 0 15px;
+		background: #fff;
+		padding:    20px 15px;
+		text-align: center;
+		.name {
+			margin-top: 0;
+		}
+		.desc {
+			padding-bottom: 15px;
+		}
+	}
+}
+
+// widget list post
+.widget-list-posts {
+	ul {
+		li {
+			@include clearfix();
+			.feature-image {
+				float: left;
+				width: 90px;
+				a {
+					position: relative;
+					display:  inherit;
+					overflow: hidden;
+					img {
+						@include transition(all 0.5s ease-in-out);
+					}
+					&:hover img {
+						opacity: 0.8;
+						@include transform(scale(1.1, 1.1));
+					}
+				}
+			}
+			.post-description {
+				width:        calc(100% - 90px);
+				padding-left: 15px;
+				float:        left;
+				.cat-links {
+					text-transform: uppercase;
+					color:          #b9b9bf;
+					font-size:      0.8em;
+					display:        block;
+					font-weight:    600;
+					line-height:    1.4em;
+					a {
+						color: #b9b9bf;
+					}
+				}
+				h2 {
+					font-size:  1.3em;
+					margin-top: 0;
+				}
+				.post-excerpt {
+					font-size: 0.9em;
+					color:     #8f99a3;
+					.date, .author {
+						&:before {
+							font:         normal normal normal 14px/1 FontAwesome;
+							margin-right: 5px;
+						}
+
+					}
+					.date:before {
+						content: "\f073";
+					}
+					span, a {
+						display: inline-block;
+					}
+					.author {
+						color:        #8f99a3;
+						margin-right: 5px;
+						&:before {
+							content: "\f007";
+						}
+					}
+				}
+			}
+
+		}
+	}
+}
+
+// newlleter
+.epm-sign-up-form {
+	@include clearfix();
+	margin-top: 15px;
+	.epm-form-field {
+		width: calc(100% - 120px);
+		float: left;
+		label {
+			display: none;
+		}
+		.email {
+			border:  1px solid $border_color;
+			padding: 10px 15px;
+			width:   100%;
+		}
+	}
+	.epm-sign-up-button {
+		float:         left;
+		width:         120px;
+		border-radius: 0;
+		padding:       10px 15px 9px 15px;
+		text-align:    center;
+		box-shadow:    0 0 0;
+		border:        none;
+		background:    #173d4f;
+		color:         #fff;
+		&:focus {
+			outline: none;
+		}
+	}
+}

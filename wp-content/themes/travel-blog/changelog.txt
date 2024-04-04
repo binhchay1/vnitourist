@@ -1,0 +1,25 @@
+/*version 1.1-  */
+Fixed: Link in Feature Slider not working
+
+
+/*version 1.0.5 -  */
+Added: Options config background header sticky for menu home page transparent
+Added: Options config show or hiden next and preview post in single post
+Added: Options config show or hiden share social in single post
+Added: Options Show Read more text in description of blog
+Fixed: Link in text of coppy right not working
+
+
+/*version 1.0.4 -  */
+Updated: Add more config for text menu color active
+
+/*version 1.0.3 -  */
+Fixed: Mobile Not show in mobile
+
+/*version 1.0.2 -  */
+Updated: Sticky Menu Option
+
+/*version 1.0.1 -  */
+Updated: Responsive style
+
+/*version 1.0.0 -  */

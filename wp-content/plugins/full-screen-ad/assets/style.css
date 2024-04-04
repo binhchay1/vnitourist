@@ -1,0 +1,32 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.total-ad-notice {
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    line-height: 35px;
+    padding: 0 35px;
+    font-family: Arial;
+}
+
+.total-ad-notice .skip-ad-button {
+    float: right;
+    height: 31px;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 0;
+    line-height: 29px;
+    text-transform: uppercase;
+    padding: 0 25px;
+    margin: 2px 0;
+    font-family: Arial;
+}
+
+.total-ad-notice .skip-ad-button:hover {
+    background: #fff;
+    color: #000;
+}

@@ -1,0 +1,110 @@
+.wrapper-footer {
+	.wrapper-copyright {
+		padding-top:    20px;
+		padding-bottom: 15px;
+	}
+	a {
+		color: #fff;
+	}
+	.main-top-footer {
+		position: relative;
+		.widget-title {
+			text-transform: uppercase;
+			margin-bottom:  20px;
+			text-align:     center;
+		}
+	}
+	ul {
+		margin: 0;
+		li {
+			list-style: none;
+		}
+	}
+	.null-instagram-feed {
+		position: relative;
+
+	}
+	.instagram-pics {
+		@include clearfix();
+		li {
+			width:   16.6667%;
+			display: inline;
+			float:   left;
+			margin:  0;
+			img {
+				max-width:      100%;
+				vertical-align: middle;
+				&:hover {
+					opacity: .87;
+				}
+			}
+		}
+	}
+}
+
+.footer__arrow-top {
+	position:    fixed;
+	right:       15px;
+	width:       30px;
+	height:      30px;
+	display:     inline-block;
+	z-index:     999;
+	text-align:  center;
+	line-height: 30px;
+	font-size:   22px;
+	font-weight: bold;
+	color:       #b5b1b1;
+	&:focus, &:visited {
+		color: #b5b1b1;
+	}
+	&:before, &:after, span:before, span:after {
+		content:  "";
+		width:    8px;
+		height:   8px;
+		position: absolute;
+	}
+	&:before {
+		border-left:   2px solid;
+		border-top:    2px solid;
+		top:           0;
+		left:          0;
+		border-radius: 4px 0 0 0;
+	}
+	&:after {
+		border-right:  2px solid;
+		border-top:    2px solid;
+		top:           0;
+		right:         0;
+		border-radius: 0 4px 0 0;
+	}
+	span {
+		&:before {
+			border-left:   2px solid;
+			border-bottom: 2px solid;
+			bottom:        0;
+			left:          0;
+			border-radius: 0 0 0 4px;
+		}
+		&:after {
+			border-right:  2px solid;
+			border-bottom: 2px solid;
+			bottom:        0;
+			right:         0;
+			border-radius: 0 0 4px 0;
+		}
+	}
+}
+
+#copyright {
+	padding-top: 10px;
+}
+
+.footer_menu {
+	text-align: right;
+	margin:     0;
+	li {
+		display:     inline-block;
+		margin-left: 10px;
+		list-style:  none;
+	}
+}

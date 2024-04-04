@@ -1,0 +1,39 @@
+.updated.redux-notice.is-dismissible {
+	display: none !important;
+}
+
+.wrapper-feature_image > div.rwmb-label {
+	display: none;
+}
+
+.wrapper-feature_image .rwmb-image-item {
+	width:  100%;
+	margin: 0;
+}
+
+.wrapper-feature_image .rwmb-image-item .rwmb-media-preview,
+.wrapper-feature_image .rwmb-image-item .rwmb-media-preview .rwmb-media-content img {
+	width: 100%;
+}
+
+.widget-content .wp-picker-container {
+	position: relative;
+}
+
+.widget-content .wp-picker-container .wp-picker-input-wrap {
+	position: absolute;
+	left:     0;
+}
+
+.widget-content .wp-picker-container > .wp-picker-holder {
+	position: absolute;
+	z-index:  999;
+}
+
+.widget-content .wp-picker-container.wp-picker-active .wp-picker-input-wrap {
+	position: relative
+}
+
+[id^="meta-box-post-format-"] {
+	display: none
+}

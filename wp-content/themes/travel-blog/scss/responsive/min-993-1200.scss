@@ -1,0 +1,21 @@
+@media (min-width: 1380px) {
+	//.container {
+	//	width: 1380px;
+	//}
+	//.boxed-area {
+	//	max-width: 1410px;
+	//	.sticky_header.affix {
+	//		max-width: 1410px;
+	//	}
+	//}
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+	.navbar-nav > li {
+		padding: 0 15px;
+	}
+}
+
+@media (max-width: 1025px) {
+
+}

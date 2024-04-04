@@ -1,0 +1,31 @@
+@media (min-width: 768px) and (max-width: 992px) {
+	.hero-banner .content-inner {
+		padding: 160px 0 130px;
+		h2 {
+			padding-left:  0;
+			padding-right: 0;
+			a {
+				font-size:   40px;
+				line-height: 40px;
+			}
+		}
+	}
+	.content-area {
+		.col-sm-8, .col-sm-4 {
+			width: 100%;
+			float: none;
+		}
+		.widget-area {
+			padding-top: 50px;
+		}
+	}
+	.wrapper-footer .instagram-pics li {
+		width: 25%;
+		&:nth-child(5n), &:nth-child(6n) {
+			display: none;
+		}
+	}
+	.wrapper-featured-slider .feature-slider .wrapper-content-item{
+		width: 33.333%;
+	}
+}

@@ -1,0 +1,114 @@
+@media (max-width: 600px) {
+
+	.post-navigation .nav-links {
+		.nav-previous, .nav-next {
+			width:      100%;
+			text-align: left;
+			float:      left;
+		}
+	}
+	.site-header {
+		top: 0;
+	}
+	.admin-bar {
+		.site-header {
+			top:           46px;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+		}
+	}
+	.comments-area {
+		.comment-list-inner {
+			li {
+				.content-comment {
+					padding: 15px 0;
+				}
+				.wrapper_avatar {
+					float:  none;
+					margin: 0 auto;
+				}
+				.comment-right {
+					width:      100%;
+					float:      none;
+					margin-top: 20px;
+					padding:    0;
+				}
+				.children {
+					margin-left: 0;
+				}
+				.comment-extra-info .text-left .date {
+					padding-left: 10px;
+				}
+			}
+			.comments-title {
+				padding: 0 10px;
+				margin:  0 10px;
+			}
+		}
+		.comment-list {
+			padding: 20px 0;
+		}
+	}
+
+	.content-blog-list, .content-blog-full_one_list {
+		.list-item {
+			.post-formats-wrapper {
+				width: 100%;
+				float: none;
+			}
+			.entry-list-content {
+				margin-top: 20px;
+			}
+		}
+	}
+	.full-content-single {
+		padding:      20px 0 10px 0;
+		margin-top:   0;
+		border-left:  none;
+		border-right: none;
+		border-top:   none;
+		.post-content {
+			padding-left: 0;
+			p {
+				font-size: 1em;
+			}
+		}
+		.left-content-single {
+			position:   static;
+			width:      100%;
+			margin-top: 25px;
+			.share-block {
+				text-align: left;
+				border:     none;
+				a {
+					display:       inline-block;
+					height:        auto;
+					width:         40px;
+					line-height:   1.1;
+					border-bottom: none;
+					text-align:    center;
+					&.comment-number {
+						background-color: transparent;
+						color:            #333;
+						font-size:        18px;
+						position:         relative;
+						&:before {
+							content:      "\f0e6";
+							font:         normal normal normal 14px/1 FontAwesome;
+							margin-right: 5px;
+						}
+					}
+
+				}
+			}
+		}
+
+	}
+
+	.element-fixed {
+		.full-content-single {
+			.left-content-single {
+				position: static;
+			}
+		}
+	}
+}

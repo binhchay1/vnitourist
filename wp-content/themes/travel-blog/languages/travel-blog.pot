@@ -1,0 +1,1124 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-16 04:03+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: svn/wp/Theme/travel-blog/404.php:18
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/404.php:22
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/comments.php:31
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: svn/wp/Theme/travel-blog/comments.php:41
+#: svn/wp/Theme/travel-blog/comments.php:54
+msgid "Older Comments"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/comments.php:42
+#: svn/wp/Theme/travel-blog/comments.php:55
+msgid "Newer Comments"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/comments.php:66
+msgid "Comments are closed."
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/search.php:21
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/footer.php:46
+msgid "Copyright &copy; 2017 Travel Blog. All Rights Reserved."
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/footer.php:63
+msgid "Go To Top"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/single.php:30
+msgid "WRITTEN BY"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/widgets.php:34
+msgid "Select"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/widgets.php:35
+msgid "Remove"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/widgets.php:97
+msgid "Border & Background Title Color"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/widgets.php:112
+msgid "Extra Class"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/init.php:166
+msgid "Sidebar"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/init.php:168
+msgid ""
+"Position on the left or right of content. It will not show on shop page."
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/init.php:177
+#: svn/wp/Theme/travel-blog/inc/admin/options/footer.php:4
+msgid "Footer"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/init.php:179
+#: svn/wp/Theme/travel-blog/inc/init.php:189
+msgid "Add widgets here."
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/init.php:187
+msgid "Copyright Right"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/init.php:246
+msgid "Primary Menu"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/init.php:419
+#: svn/wp/Theme/travel-blog/page-templates/grid.php:143
+#: svn/wp/Theme/travel-blog/page-templates/list.php:144
+#: svn/wp/Theme/travel-blog/page-templates/grid-3-column.php:143
+#: svn/wp/Theme/travel-blog/template-parts/featured-slider.php:57
+msgid "Read More"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/init.php:472
+msgid "Pingback:"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/init.php:472
+#: svn/wp/Theme/travel-blog/inc/init.php:499
+msgid "Edit"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/init.php:489
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/init.php:501
+msgid "Reply"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/related_posts.php:24
+msgid "Related Posts"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/related_posts.php:56
+#: svn/wp/Theme/travel-blog/template-parts/content-page.php:26
+#: svn/wp/Theme/travel-blog/template-parts/content.php:37
+#: svn/wp/Theme/travel-blog/template-parts/content-list.php:37
+#: svn/wp/Theme/travel-blog/template-parts/content-grid.php:39
+msgid "Pages:"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/breadcrumb.php:43
+msgid "Home"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/breadcrumb.php:64
+msgid "Search Result"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/breadcrumb.php:66
+msgid "404 Not Found"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:17
+msgid "Previous post"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:18
+msgid "Next post"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:33
+#: svn/wp/Theme/travel-blog/page-templates/boxed.php:156
+#: svn/wp/Theme/travel-blog/page-templates/grid.php:244
+#: svn/wp/Theme/travel-blog/page-templates/list.php:249
+#: svn/wp/Theme/travel-blog/page-templates/grid-3-column.php:247
+msgid "Newer Posts"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:34
+#: svn/wp/Theme/travel-blog/page-templates/boxed.php:157
+#: svn/wp/Theme/travel-blog/page-templates/grid.php:245
+#: svn/wp/Theme/travel-blog/page-templates/list.php:250
+#: svn/wp/Theme/travel-blog/page-templates/grid-3-column.php:248
+msgid "Older Posts"
+msgstr ""
+
+#. used between list items, there is a space after the comma
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:64
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:104
+#, php-format
+msgctxt "post date"
+msgid "%s"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:67
+#, php-format
+msgctxt "post author"
+msgid "By %s"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:106
+msgid "By"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:111
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#. used between list items, there is a space after the comma
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:126
+msgid ", "
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:128
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:176
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:178
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:208
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:180
+#, php-format
+msgid "Author: %s"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:182
+#, php-format
+msgid "Year: %s"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:182
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:184
+#, php-format
+msgid "Month: %s"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:184
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:186
+#, php-format
+msgid "Day: %s"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:186
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:189
+msgctxt "post format archive title"
+msgid "Asides"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:191
+msgctxt "post format archive title"
+msgid "Galleries"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:193
+msgctxt "post format archive title"
+msgid "Images"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:195
+msgctxt "post format archive title"
+msgid "Videos"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:197
+msgctxt "post format archive title"
+msgid "Quotes"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:199
+msgctxt "post format archive title"
+msgid "Links"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:201
+msgctxt "post format archive title"
+msgid "Statuses"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:203
+msgctxt "post format archive title"
+msgid "Audio"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:205
+msgctxt "post format archive title"
+msgid "Chats"
+msgstr ""
+
+#. 1: Taxonomy singular name, 2: Current taxonomy term
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:213
+#, php-format
+msgid "%1$s %2$s"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:213
+msgid "Tourist"
+msgstr ""
+
+#. 1: Taxonomy singular name, 2: Current taxonomy term
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:216
+#, php-format
+msgid "%1$s: %2$s"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/template-tags.php:220
+msgid "Archives"
+msgstr ""
+
+#. Name of the template
+msgid "Home Boxed Layout"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/page-templates/boxed.php:40
+#: svn/wp/Theme/travel-blog/page-templates/grid.php:40
+#: svn/wp/Theme/travel-blog/page-templates/list.php:40
+#: svn/wp/Theme/travel-blog/page-templates/grid-3-column.php:40
+msgid "Search ..."
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/page-templates/boxed.php:40
+#: svn/wp/Theme/travel-blog/page-templates/grid.php:40
+#: svn/wp/Theme/travel-blog/page-templates/list.php:40
+#: svn/wp/Theme/travel-blog/page-templates/grid-3-column.php:40
+msgid "Search for:"
+msgstr ""
+
+#. Name of the template
+msgid "Home Grid"
+msgstr ""
+
+#. Name of the template
+msgid "Home List"
+msgstr ""
+
+#. Name of the template
+msgid "Home Grid There Column"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/template-parts/content-single.php:37
+#: svn/wp/Theme/travel-blog/template-parts/content.php:46
+#: svn/wp/Theme/travel-blog/template-parts/content-list.php:46
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:170
+msgid "Share Facebook"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/template-parts/content-single.php:40
+#: svn/wp/Theme/travel-blog/template-parts/content.php:47
+#: svn/wp/Theme/travel-blog/template-parts/content-list.php:47
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:176
+msgid "Share twitter"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/template-parts/content-single.php:43
+#: svn/wp/Theme/travel-blog/template-parts/content.php:48
+#: svn/wp/Theme/travel-blog/template-parts/content-list.php:48
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:182
+msgid "Share pinterest"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/template-parts/content-single.php:46
+#: svn/wp/Theme/travel-blog/template-parts/content.php:49
+#: svn/wp/Theme/travel-blog/template-parts/content-list.php:49
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:188
+msgid "Share linkedin"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/template-parts/content-none.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/template-parts/content-none.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/template-parts/content-none.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#. %s: Name of current post
+#: svn/wp/Theme/travel-blog/template-parts/content-page.php:36
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/tax-meta.php:12
+msgid "Using in Theme Option"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/tax-meta.php:13
+msgid "No Sidebar"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/tax-meta.php:14
+msgid "Left Sidebar"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/tax-meta.php:15
+msgid "Right Sidebar"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/tax-meta.php:17
+msgid "Custom Layout "
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/tax-meta.php:20
+msgid "Category Primary Color"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/meta-boxes.php:7
+msgid "Post Format: Gallery"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/meta-boxes.php:12
+msgid "Images"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/meta-boxes.php:19
+msgid "Post Format: Video"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/meta-boxes.php:24
+msgid "Video URL or Embeded Code"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/meta-boxes.php:31
+msgid "Post Format: Audio"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/meta-boxes.php:36
+msgid "Audio URL or Embeded Code"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/meta-boxes.php:43
+msgid "Post Format: Quote"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/meta-boxes.php:48
+msgid "Quote"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/meta-boxes.php:53
+msgid "Author"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/meta-boxes.php:58
+msgid "Author URL"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/meta-boxes.php:65
+msgid "Post Format: Link"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/meta-boxes.php:70
+msgid "URL"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/meta-boxes.php:75
+msgid "Text"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/meta-boxes.php:84
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:3
+msgid "Display Settings"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/meta-boxes.php:88
+msgid "Use Custom Layout?"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/meta-boxes.php:92
+msgid "This will overwrite page layout settings in Theme Options"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/meta-boxes.php:95
+msgid "Select Layout"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/meta-boxes.php:108
+msgid "Feature Image Hover"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/meta-boxes.php:116
+#: svn/wp/Theme/travel-blog/inc/widgets/about-us.php:33
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:225
+#: svn/wp/Theme/travel-blog/inc/admin/Tax-meta-class/Tax-meta-class.php:570
+msgid "Upload Image"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/meta-boxes.php:120
+msgid "Upload image hover"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options-config.php:41
+#: svn/wp/Theme/travel-blog/inc/admin/options-config.php:42
+msgid "Theme Options"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/widgets/list-post.php:29
+#: svn/wp/Theme/travel-blog/inc/widgets/facebook_widget.php:20
+#: svn/wp/Theme/travel-blog/inc/widgets/about-us.php:29
+msgid "Title"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/widgets/list-post.php:34
+msgid "Limit"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/widgets/list-post.php:39
+msgid "Order"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/widgets/list-post.php:41
+msgid "DESC"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/widgets/list-post.php:42
+msgid "ASC"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/widgets/list-post.php:46
+msgid "Display"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/widgets/list-post.php:48
+msgid "Random"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/widgets/list-post.php:49
+msgid "Popular"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/widgets/list-post.php:50
+msgid "Date"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/widgets/facebook_widget.php:7
+msgid "A widget that displays a Facebook Like Box"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/widgets/facebook_widget.php:26
+msgid "Facebook Page URL"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/widgets/facebook_widget.php:28
+msgid "EG. http://www.facebook.com/envato"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/widgets/facebook_widget.php:33
+msgid "Show Faces"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/widgets/facebook_widget.php:39
+msgid "Show Stream"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/widgets/facebook_widget.php:45
+msgid "Show Page Cover Image"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/widgets/about-us.php:37
+msgid "Name"
+msgstr ""
+
+#. Description of the theme
+#: svn/wp/Theme/travel-blog/inc/widgets/about-us.php:41
+msgid "Description"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/widgets/about-us.php:45
+msgid "Upload Signature"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/social-media-setting.php:3
+msgid "Social Media Setting"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/social-media-setting.php:10
+msgid "Facebook URL"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/social-media-setting.php:15
+msgid "Twitter URL"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/social-media-setting.php:20
+msgid "Instagram URL"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/social-media-setting.php:25
+msgid "Pinterest URL"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/social-media-setting.php:30
+msgid "Bloglovin URL"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/social-media-setting.php:35
+msgid "Google Plus URL"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/social-media-setting.php:40
+msgid "Tumblr URL"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/social-media-setting.php:45
+msgid "Youtube URL"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/social-media-setting.php:50
+msgid "Dribbble URL"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/social-media-setting.php:55
+msgid "Linkedin URL"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/social-media-setting.php:60
+msgid "RSS Link"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/typography.php:4
+msgid "Typography"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/typography.php:11
+msgid "Body Font"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/typography.php:12
+msgid "Specify the body font properties."
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/typography.php:27
+msgid "Title Font"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/typography.php:41
+msgid "Font Size H1 (px)"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/typography.php:50
+msgid "Font Weight H1"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/typography.php:71
+msgid "Font Size H2 (px)"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/typography.php:80
+msgid "Font Weight H2"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/typography.php:101
+msgid "Font Size H3 (px)"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/typography.php:110
+msgid "Font Weight H3"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/typography.php:131
+msgid "Font Size H4 (px)"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/typography.php:140
+msgid "Font Weight H4"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/typography.php:161
+msgid "Font Size H5 (px)"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/typography.php:170
+msgid "Font Weight H5"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/typography.php:191
+msgid "Font Size H6 (px)"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/typography.php:200
+msgid "Font Weight H6"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:9
+msgid "Front Page Settings"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:16
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:59
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:121
+msgid "Select Layout Default"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:36
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:79
+msgid "Select Style"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:38
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:81
+msgid "Full Post Layout"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:39
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:82
+msgid "Grid Post Layout"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:40
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:83
+msgid "1 Full Post then Grid Layout"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:41
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:84
+msgid "List Post Layout"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:42
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:85
+msgid "1 Full Post then List Layout"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:52
+msgid "Archive Settings"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:94
+msgid "Excerpt Length"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:95
+msgid ""
+"Enter the number of words you want to cut from the content to be the excerpt "
+"of search and archive"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:102
+msgid "Show Text Read more"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:106
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:143
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:152
+#: svn/wp/Theme/travel-blog/inc/admin/options/footer.php:39
+#: svn/wp/Theme/travel-blog/inc/admin/options/styling.php:13
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:162
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:170
+msgid "show"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:107
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:144
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:153
+#: svn/wp/Theme/travel-blog/inc/admin/options/footer.php:40
+#: svn/wp/Theme/travel-blog/inc/admin/options/styling.php:14
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:163
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:171
+msgid "hide"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:114
+msgid "Post & Page Settings"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:139
+msgid "Related Post"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:148
+msgid "Show Next and Preview Post"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:159
+msgid "Share Social"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:164
+msgid "Comment Number"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:195
+msgid "Featured area"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:201
+msgid "Show Featured area"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:206
+msgid "Featured Area Option"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:208
+msgid "Hero Banner"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:209
+msgid "Feature Slider"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:219
+msgid "Select One Post Feature"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:236
+msgid "Select Post"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:242
+msgid "Highlight"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:247
+msgid "Show Highlight"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:252
+msgid "The Highlight"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:253
+msgid "Title Highlight"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:262
+msgid "Select Category"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:273
+msgid "Select Highlight Post"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/display.php:280
+msgid "Amount of Slides"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/footer.php:12
+msgid "Background Copyright Color"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/footer.php:19
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:207
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:234
+msgid "Text Color"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/footer.php:27
+msgid "Copyright Text"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/footer.php:35
+msgid "Back To Top"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/custom-css.php:4
+msgid "Custom Css"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/custom-css.php:11
+msgid "CSS Code"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/custom-css.php:12
+msgid "Paste your CSS code here."
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/styling.php:5
+msgid "Styling"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/styling.php:9
+msgid "Preloading"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/styling.php:19
+msgid "Layout"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/styling.php:21
+msgid "Boxed"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/styling.php:22
+msgid "Wide"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/styling.php:30
+msgid "Background Pattern"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/styling.php:31
+msgid "select background pattern"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/styling.php:79
+msgid "Body Background"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/styling.php:80
+msgid "Body background with image, color, etc."
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/styling.php:89
+msgid "Theme Primary Color"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:6
+msgid "General Settings"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:12
+msgid "Main Menu Home Page"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:19
+msgid "Menu Overlay"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:27
+msgid "Logo Home Page"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:28
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:63
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:98
+msgid "Enter URL or Upload an image file as your logo."
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:34
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:113
+msgid "Background header"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:40
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:118
+msgid "Text Menu Color"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:47
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:124
+msgid "Text Menu Active Color"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:54
+msgid "Menu Overlay Sticky"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:56
+msgid "Custom"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:57
+msgid "Default"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:62
+msgid "Logo Home Page Sticky"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:69
+msgid "Background header Sticky"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:75
+msgid "Text Menu Color Sticky"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:82
+msgid "Text Menu Active Color Sticky"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:90
+msgid "Main Menu"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:97
+msgid "Header Logo"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:104
+msgid "Width Logo"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:130
+msgid "Font Size (px)"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:139
+msgid "Font Weight"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:158
+msgid "Search Icon"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:166
+msgid "Social Link"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:177
+msgid "Sticky Menu"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:184
+msgid "Show Sticky Menu"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:186
+msgid "Yes"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:187
+msgid "No"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:194
+msgid "Sub Menu"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:201
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:228
+msgid "Background Color"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:213
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:240
+msgid "Text Hover Color"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/options/general.php:221
+msgid "Mobile Menu"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/demo_importer/extension_demo_importer.php:235
+msgid "Demo Already Imported"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/demo_importer/extension_demo_importer.php:261
+#: svn/wp/Theme/travel-blog/inc/admin/demo_importer/extension_demo_importer.php:263
+msgid "Demo Importer"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/demo_importer/extension_demo_importer.php:268
+msgid "Works best to import on a new install of WordPress"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/Tax-meta-class/Tax-meta-class.php:396
+msgid "Click to browse icon"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/Tax-meta-class/Tax-meta-class.php:396
+msgid "Browse Icon"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/Tax-meta-class/Tax-meta-class.php:568
+msgid "Remove Image"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/demo_importer/inc/field_demo_importer.php:95
+#: svn/wp/Theme/travel-blog/inc/admin/demo_importer/inc/field_demo_importer.php:116
+msgid "Import Demo"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/demo_importer/inc/field_demo_importer.php:99
+msgid "Demo Imported"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/demo_importer/inc/field_demo_importer.php:116
+#: svn/wp/Theme/travel-blog/inc/admin/demo_importer/inc/field_demo_importer.php:119
+msgid "Please Wait..."
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/demo_importer/inc/field_demo_importer.php:118
+msgid "Imported"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/demo_importer/inc/field_demo_importer.php:120
+msgid "Re-Import"
+msgstr ""
+
+#: svn/wp/Theme/travel-blog/inc/admin/demo_importer/inc/field_demo_importer.php:129
+msgid "No Demo Data Provided"
+msgstr ""
+
+#. Name of the theme
+msgid "Travel Blog"
+msgstr ""
+
+#. URI of the theme
+msgid "http://travelblog.physcode.com/"
+msgstr ""
+
+#. Author of the theme
+msgid "Physcode"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://physcode.com/"
+msgstr ""
