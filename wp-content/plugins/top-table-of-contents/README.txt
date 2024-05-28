@@ -2,8 +2,8 @@
 Contributors: boomdevs
 Tags: table-of-contents, toc , navigation, seo, indexes
 Requires at least: 5.0
-Tested up to: 6.4.3
-Stable tag: 1.3.16
+Tested up to: 6.5.2
+Stable tag: 1.3.17
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -283,3 +283,6 @@ There is no prerequisites for installing **TOP Table Of Contents**. You can foll
 
 = 1.3.16 - 09 March 2024 =
 * Fix: Appsero SDK security issues.
+
+= 1.3.17 - 16 April 2024 =
+compatibility: Enhanced compatibility with WordPress 6.5.2

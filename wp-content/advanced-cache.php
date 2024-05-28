@@ -8,9 +8,9 @@ defined( 'ABSPATH' ) || exit;
 
 define( 'WP_ROCKET_ADVANCED_CACHE', true );
 
-$rocket_path        = '/home/vnitourist.com/public_html/wp-content/plugins/wp-rocket/';
-$rocket_config_path = '/home/vnitourist.com/public_html/wp-content/wp-rocket-config/';
-$rocket_cache_path  = '/home/vnitourist.com/public_html/wp-content/cache/wp-rocket/';
+$rocket_path        = 'C:\laragon\www\vnitourist\wp-content\plugins\wp-rocket/';
+$rocket_config_path = 'C:\laragon\www\vnitourist/wp-content/wp-rocket-config/';
+$rocket_cache_path  = 'C:\laragon\www\vnitourist/wp-content/cache/wp-rocket/';
 
 if (
 	version_compare( phpversion(), '7.3', '<' )

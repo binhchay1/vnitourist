@@ -7,6 +7,7 @@
 # you can delete this whole section/until Configuration.
 /wp-content/index.php
 /wp-content/languages
+/wp-content/cache
 
 # Configuration
 wp-config.php
