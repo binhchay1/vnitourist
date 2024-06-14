@@ -3,7 +3,7 @@ Contributors: boomdevs
 Tags: table-of-contents, toc , navigation, seo, indexes
 Requires at least: 5.0
 Tested up to: 6.5.3
-Stable tag: 1.3.20
+Stable tag: 1.3.21
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -295,3 +295,6 @@ Fix: Fix heading id issues for Brizy page builder
 
 = 1.3.20 - 03 June 2024 =
 * Added: integrated SureCart plugin support
+
+= 1.3.21 - 13 June 2024 =
+* Fix: deprected error solved

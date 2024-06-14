@@ -133,3 +133,6 @@ Fix: Fix heading id issues for Brizy page builder
 
 = 1.3.20 - 03 June 2024 =
 * Added: integrated SureCart plugin support
+
+= 1.3.21 - 13 June 2024 =
+* Fix: deprected error solved

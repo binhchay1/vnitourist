@@ -69,7 +69,7 @@ class Boomdevs_Toc_Shortcode
         $top_level                       = $settings['heading_top_level'] ? $settings['heading_top_level'] : 1;
         $markupFixer                     = new TOC\MarkupFixer();
         $tocGenerator                    = new TOC\TocGenerator();
-        $content                         = $markupFixer->fix($content, $top_level, $settings['title_depth'], $settings['title_hide']);
+        $content                         = $markupFixer->fix($content, $settings['title_hide'], $top_level, $settings['title_depth']);
         $show_heading_toggle_icon        = '';
         $show_sub_heading_toggle_icon    = '';
         $fiexd_layout_width              = '';
@@ -123,7 +123,7 @@ class Boomdevs_Toc_Shortcode
                         <div class="bd_toc_floating_content list-type-<?php echo $settings['heading_list_type']; ?>">
                             <div class="bd_toc_content_list">
                                 <?php
-                                echo "<div class='bd_toc_content_floating_list_item'>" . $tocGenerator->getHtmlMenu($content, $top_level, $settings['title_depth'], $settings['title_hide']) . "</div>";
+                                echo "<div class='bd_toc_content_floating_list_item'>" . $tocGenerator->getHtmlMenu($content, $settings['title_hide'],$top_level, $settings['title_depth']) . "</div>";
                                 ?>
                             </div>
                         </div>
@@ -154,7 +154,7 @@ class Boomdevs_Toc_Shortcode
                             <div class="bd_toc_content list-type-<?php echo $settings['heading_list_type']; ?>">
                                 <div class="<?php echo $show_heading_toggle_icon && Boomdevs_Toc_Utils::isProActivated() || $show_sub_heading_toggle_icon && Boomdevs_Toc_Utils::isProActivated() ? 'heading_toggle_icon sub_heading_toggle_icon bd_toc_content_list' : 'bd_toc_content_list' ?> ">
                                     <?php
-                                    echo "<div class='bd_toc_content_list_item'>" . $tocGenerator->getHtmlMenu($content, $top_level, $settings['title_depth'], $settings['title_hide']) . "</div>";
+                                    echo "<div class='bd_toc_content_list_item'>" . $tocGenerator->getHtmlMenu($content, $settings['title_hide'], $top_level, $settings['title_depth'] ) . "</div>";
                                     ?>
                                 </div>
                             </div>

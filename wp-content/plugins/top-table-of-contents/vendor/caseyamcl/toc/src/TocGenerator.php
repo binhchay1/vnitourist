@@ -70,7 +70,7 @@ class TocGenerator
      * @param int     $depth     Depth (1 through 6)
      * @return ItemInterface     KNP Menu
      */
-    public function getMenu(string $markup, int $topLevel = 1, int $depth = 6, $headings): ItemInterface
+    public function getMenu(string $markup, $headings, int $topLevel = 1, int $depth = 6): ItemInterface
     {
         // Setup an empty menu object
         $menu = $this->menuFactory->createItem('TOC');
@@ -182,9 +182,9 @@ class TocGenerator
      */
     public function getHtmlMenu(
         string $markup,
+        $headings,
         int $topLevel = 1,
         int $depth = 6,
-        $headings,
         ?RendererInterface $renderer = null,
         bool $ordered = false
     ): string {
@@ -195,7 +195,7 @@ class TocGenerator
                 : new ListRenderer(new Matcher(), $options);
         }
 
-        $menu = $this->getMenu($markup, $topLevel, $depth, $headings);
+        $menu = $this->getMenu($markup,$headings, $topLevel, $depth);
         return $renderer->render($menu);
     }
 
@@ -210,9 +210,9 @@ class TocGenerator
      */
     public function getOrderedHtmlMenu(
         string $markup,
+        $headings,
         int $topLevel = 1,
         int $depth = 6,
-        $headings,
         RendererInterface $renderer = null
     ): string {
         return $this->getHtmlMenu($markup, $topLevel, $depth, $headings, $renderer, true);
