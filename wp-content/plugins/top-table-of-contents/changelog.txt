@@ -124,3 +124,12 @@
 
 = 1.3.17 - 16 April 2024 =
 compatibility: Enhanced compatibility with WordPress 6.5.2
+
+= 1.3.18 - 12 May 2024 =
+Fix: Fix heading id issues for Brizy page builder
+
+= 1.3.19 - 21 May 2024 =
+* Added: AI Alt Text Generator menu in the admin panel.
+
+= 1.3.20 - 03 June 2024 =
+* Added: integrated SureCart plugin support

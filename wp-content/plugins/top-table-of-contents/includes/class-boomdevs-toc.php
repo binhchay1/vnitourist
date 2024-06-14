@@ -79,7 +79,7 @@ class Boomdevs_Toc {
         if ( defined( 'BOOMDEVS_TOC_VERSION' ) ) {
             $this->version = BOOMDEVS_TOC_VERSION;
         } else {
-            $this->version = '1.3.17';
+            $this->version = '1.3.20';
         }
         
         if ( defined( 'BOOMDEVS_FULL_NAME' ) ) {
@@ -156,6 +156,7 @@ class Boomdevs_Toc {
          */
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-boomdevs-toc-settings.php';
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-boomdevs-toc-metabox.php';
+
 
         /**
          * The class responsible for loading shortcode of the plugin.

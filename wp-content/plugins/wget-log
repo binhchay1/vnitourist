@@ -1,6 +1,0 @@
---2024-01-15 09:41:37--  https://translate.google.com/website?sl=auto
-Resolving translate.google.com (translate.google.com)... 2404:6800:4003:c00::65, 2404:6800:4003:c00::66, 2404:6800:4003:c00::64, ...
-Connecting to translate.google.com (translate.google.com)|2404:6800:4003:c00::65|:443... connected.
-HTTP request sent, awaiting response... 400 Bad Request
-2024-01-15 09:41:37 ERROR 400: Bad Request.
-

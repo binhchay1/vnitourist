@@ -51,6 +51,8 @@ class Boomdevs_Toc_Admin {
 
         $this->plugin_name = $plugin_name;
         $this->version     = $version;
+        add_action('wp_ajax_Boomdevs_Toc_custom_plugin_install', [$this, 'Boomdevs_Toc_custom_plugin_install']);
+        add_action( 'wp_ajax_nopriv_Boomdevs_Toc_custom_plugin_install', [$this, 'Boomdevs_Toc_custom_plugin_install'] );
 
     }
 
@@ -115,6 +117,12 @@ class Boomdevs_Toc_Admin {
                 'skin_change_alert' => __( 'You have successfully imported an skin.', 'boomdevs-toc' ),
             )
         );
+
+        wp_localize_script($this->plugin_name, 'Boomdevs_Toc_custom_plugin_install_obj', array(
+            'ajax_url'  => admin_url('admin-ajax.php'),
+            'security' => wp_create_nonce('Boomdevs_Toc_custom_plugin_install_nonce')
+            )
+        );
     }
 
     /**
@@ -147,6 +155,36 @@ class Boomdevs_Toc_Admin {
 
         return $actions;
     }
+
+    public function Boomdevs_Toc_custom_plugin_install() {
+
+        check_ajax_referer('Boomdevs_Toc_custom_plugin_install_nonce', 'security');
+    
+        $plugin_slug = 'ai-image-alt-text-generator-for-wp';
+        $plugin_file = 'ai-image-alt-text-generator-for-wp/boomdevs-ai-image-alt-text-generator.php';
+    
+        // Include necessary WordPress files for plugin installation and activation
+        require_once ABSPATH . 'wp-admin/includes/plugin.php';
+        require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
+    
+        // Install the plugin
+        $upgrader = new Plugin_Upgrader();
+        $installed = $upgrader->install("https://downloads.wordpress.org/plugin/{$plugin_slug}.latest-stable.zip");
+    
+        if (is_wp_error($installed)) {
+            wp_send_json_error(array('message' => $installed->get_error_message()));
+        }
+    
+        // Activate the plugin
+        $activated = activate_plugin($plugin_file);
+    
+        if (is_wp_error($activated)) {
+            wp_send_json_error(array('message' => $activated->get_error_message()));
+        }
+    
+        wp_send_json_success(array('message' => 'Plugin installed and activated successfully.'));
+    }
+
 
 
 }

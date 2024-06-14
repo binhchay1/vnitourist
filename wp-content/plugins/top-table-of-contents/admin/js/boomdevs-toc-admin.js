@@ -31,6 +31,41 @@
 				});
 			}
 		});
+
+		// Attach click event handler to the install Plugin
+		$('.toc-custom-landing-install-btn').on('click', function(e) {
+			e.preventDefault();
+	
+			let $button = $(this);
+			$button.prop('disabled', true);
+			$button.find('.toc-custom-landing-install-btn-txt').text('Installing...');
+			let targetUrl = $button.data('target-url');
+	
+			$.ajax({
+				url: Boomdevs_Toc_custom_plugin_install_obj.ajax_url,
+				type: 'POST',
+				data: {
+					action: 'Boomdevs_Toc_custom_plugin_install',
+					security: Boomdevs_Toc_custom_plugin_install_obj.security
+				},
+				success: function(response) {
+					$button.prop('disabled', false);
+					$button.find('.toc-custom-landing-install-btn-txt').text('Plugin Activated');
+					// Redirect to the specified URL after a short delay
+					setTimeout(function() {
+						window.location.href = targetUrl;
+					}, 1000);
+				},
+				error: function() {
+					alert('An error occurred during the installation process.');
+					$button.prop('disabled', false);
+					$button.find('.toc-custom-landing-install-btn-txt').text('Install Ai Alt Text - Free');
+				}
+			});
+		});
+
+
+
 	});
 
 })(jQuery);

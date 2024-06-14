@@ -348,6 +348,6 @@
             "install-path": "../masterminds/html5"
         }
     ],
-    "dev": true,
+    "dev": false,
     "dev-package-names": []
 }

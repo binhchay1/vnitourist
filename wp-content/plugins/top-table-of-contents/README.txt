@@ -2,8 +2,8 @@
 Contributors: boomdevs
 Tags: table-of-contents, toc , navigation, seo, indexes
 Requires at least: 5.0
-Tested up to: 6.5.2
-Stable tag: 1.3.17
+Tested up to: 6.5.3
+Stable tag: 1.3.20
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -286,3 +286,12 @@ There is no prerequisites for installing **TOP Table Of Contents**. You can foll
 
 = 1.3.17 - 16 April 2024 =
 compatibility: Enhanced compatibility with WordPress 6.5.2
+
+= 1.3.18 - 12 May 2024 =
+Fix: Fix heading id issues for Brizy page builder
+
+= 1.3.19 - 21 May 2024 =
+* Added: AI Alt Text Generator menu in the admin panel.
+
+= 1.3.20 - 03 June 2024 =
+* Added: integrated SureCart plugin support

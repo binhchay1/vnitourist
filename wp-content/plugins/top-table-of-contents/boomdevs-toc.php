@@ -16,7 +16,7 @@
  * Plugin Name:       TOP Table Of Contents
  * Plugin URI:        https://boomdevs.com/boomdevs-toc
  * Description:       Easily creates an SEO-friendly table of contents for your blog posts and pages. Offers both Auto and Manual Insert with highly customization options.
- * Version:           1.3.17
+ * Version:           1.3.20
  * Author:            BoomDevs
  * Author URI:        https://boomdevs.com/
  * License:           GPL-2.0+
@@ -34,7 +34,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Plugin basic information.
  */
-define( 'BOOMDEVS_TOC_VERSION', '1.3.17' );
+define( 'BOOMDEVS_TOC_VERSION', '1.3.20' );
 define( 'BOOMDEVS_TOC_PATH', plugin_dir_path( __FILE__ ) );
 define( 'BOOMDEVS_TOC_URL', plugin_dir_url( __FILE__ ) );
 define( 'BOOMDEVS_TOC_NAME', 'boomdevs-toc' );

@@ -177,6 +177,28 @@ class Boomdevs_Toc_Shortcode
      */
     public function boomdevs_toc_auto_id_headings($content)
     {
+        $post_id = get_the_ID(); // Get the current post ID
+        $vc_post_flag = get_post_meta($post_id, 'vcv-be-editor', true);
+
+        if($post_id && $vc_post_flag === 'fe') {
+            global $wp_version;
+
+            // @codingStandardsIgnoreLine
+            if (version_compare($wp_version, '5.2', '>=')) {
+                $content = get_the_content('', false, $post_id);
+            } else {
+                $post = get_post($post_id);
+                setup_postdata($post);
+                $content = get_the_content('', false);
+                wp_reset_postdata();
+            }
+
+            if (strpos($content, '<!--vcv no format-->') === false) {
+                // Call wpautop for non VCWB sourceId
+                $content = wpautop($content);
+            }
+        }
+
 
         $page_id = get_queried_object_id();
         $auto_insert_arr = 'a:1:{s:19:"disable_auto_insert";s:1:"0";}';
@@ -203,14 +225,15 @@ class Boomdevs_Toc_Shortcode
             return '<h' . $hTag . ' id="boomdevs_' . $num++ . '"';
         }, $content);
 
-        $pattern = '#(?P<full_tag><(?P<tag_name>h\d)(?P<class>[^>]*)(?P<tag_extra>[^>]*)>(?P<tag_contents>(.*))</h\d>)#i';
+        $pattern = '#<(?P<tag_name>h[1-6])(?P<class>[^>]*)(?P<tag_extra>[^>]*)>(?P<tag_contents>.*?)<\/h[1-6]>#i';
+
         if (preg_match_all($pattern, $content, $matches, PREG_SET_ORDER)) {
             $same_heading = [];
             foreach ($matches as $match) {
                 $tag_name = $match['tag_name'];
                 $tag_extra = $match['tag_extra'];
                 $tag_contents = $match['tag_contents'];
-                $full_tag = $match['full_tag'];
+                $full_tag = $match[0];;
                 $tag_class = $match['class'];
                 $without_nbsp_title = str_replace("&nbsp;", " ", $tag_contents);
                 $slug = mb_strtolower(

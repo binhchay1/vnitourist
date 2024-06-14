@@ -10,10 +10,16 @@
 // Constants: Folder directories/uri's
 define( 'TRAVEL_BLOG_THEME_DIR', trailingslashit( get_template_directory() ) );
 define( 'TRAVEL_BLOG_THEME_URI', trailingslashit( get_template_directory_uri() ) );
+/**
+ * Remove the strange [OBJ] character in the post slug
+ * See: https://github.com/WordPress/gutenberg/issues/38637
 
 /**
  * Theme Includes
  */
+
+
+
 
 add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
 /**
